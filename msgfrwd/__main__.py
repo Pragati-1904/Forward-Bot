@@ -1,6 +1,6 @@
 import json
 
-from dbf import *
+from .dbf import *
 from telethon import events
 from telethon.tl.types import User
 
