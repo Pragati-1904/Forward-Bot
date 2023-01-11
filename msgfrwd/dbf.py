@@ -6,7 +6,7 @@ CACHE = {}
 async def get_db():
     if CACHE:
         return CACHE
-    data = eval((await db.get("FRWD_DB")) or {})
+    data = eval((await db.get("FRWD_DB")) or "{}")
     CACHE.update(data)
     return data
 
