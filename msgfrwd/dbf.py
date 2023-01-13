@@ -40,6 +40,6 @@ async def get_lists(ids):
     a = await get_db()
     dst = []
     for name in a:
-        if ids in (name.get("source") or {}):
-            dst.extend(name["dest"])
+        if ids in eval(str(name.get("source")) or "[]"):
+            dst.extend(eval(str(name.get("dest")) or "[]"))
     return dst
